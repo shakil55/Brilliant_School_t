@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem !important;
+    font-weight: 800;
+    color:rgb(59 26 225) !important
+}
+
+#about p {
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+.bg-warning1{
+    background-color: #5d9191 !important;
+}
+
+.navbar-light1{
+    background-color: rgb(217 225 255) !important;
+    
+}
+.font-s{
+    font-weight: 600;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.custom-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-arrow .carousel-control-prev-icon,
+.custom-arrow .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+

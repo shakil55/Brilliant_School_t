@@ -1,0 +1,2 @@
+notice bg color: #1f4047
+nav-bar bg-color: #4fcae2
