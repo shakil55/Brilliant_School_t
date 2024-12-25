@@ -2,10 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from school import views
+
+admin.site.site_header = "Brilliant_School"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('school.urls')),
+
 ]
 
 # Serving media files during development

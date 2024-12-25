@@ -11,9 +11,10 @@ class Teacher(models.Model):
         return self.name
 
 class Notice(models.Model):
-    title = models.CharField(max_length=200)
-    content = models.TextField()
-    date_posted = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=255, verbose_name="Notice Title")
+    description = models.TextField(blank=True, null=True)
+    date_posted = models.DateTimeField(auto_now_add=True, verbose_name="Date Posted")
+    file = models.FileField(upload_to='notices/', blank=True, null=True, verbose_name="Attachment (PDF/Image)")
 
     def __str__(self):
         return self.title

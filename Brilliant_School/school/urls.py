@@ -4,6 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('', views.home, name='home'),
+    path('notices/', views.notice_board, name='notices_board'),
+
 ]
 
 if settings.DEBUG:

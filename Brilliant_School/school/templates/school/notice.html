@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .notice-board {
+            background-color: #002366;
+            color: white;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .notice-item {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .notice-title {
+            font-weight: bold;
+            color: #002366;
+        }
+
+        .notice-date {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .file-link {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .more-btn {
+            display: inline-block;
+            background-color: orange;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .more-btn:hover {
+            background-color: #ff7b00;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="notice-board">
+        <h4>নোটিশ বোর্ড</h4>
+        {% for notice in notices %}
+        <div class="notice-item">
+            <div class="notice-title">{{ notice.title }}</div>
+            <div class="notice-date">{{ notice.date_posted|date:"d M, Y" }}</div>
+            {% if notice.file %}
+            <a href="{{ notice.file.url }}" class="file-link" target="_blank">
+                {{ notice.file.name|slice:"15" }} (View File)
+            </a>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>No notices available at this time.</p>
+        {% endfor %}
+        <a href="#" class="more-btn">আরও</a>
+    </div>
+</div>
+</body>
+</html>
