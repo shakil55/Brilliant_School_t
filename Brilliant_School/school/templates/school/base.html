@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilliant School </title>
+    <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+
+
+    <style>
+        /* Navbar default style */
+        .navbar-nav .nav-link {
+            color: black !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important; /* Text color changes to white */
+            background-color: #0c5aee; /* Background becomes blue */
+            border-radius: 4px;
+        }
+
+        /* Dropdown menu hover makes dropdown active */
+        .nav-item.dropdown:hover .nav-link {
+            color: #ffffff !important;
+            background-color: #0c5aee !important;
+            border-radius: 4px;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block; /* Show dropdown menu on hover */
+        }
+
+        .dropdown-menu {
+            border: none;
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-item:hover {
+            color: white !important;
+            background-color: #0c5aee !important;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* Align logo and text */
+            color: black !important;
+            font-weight: 500;
+        }
+
+        /* Add margin and width to the logo */
+        .navbar-brand img {
+            height: 35px; /* Logo height */
+            margin-right: 8px; /* Space between logo and text */
+        }
+
+        /* Hover effect for Home */
+        .navbar-brand:hover {
+            background-color: #0c5aee; /* Blue background */
+            color: #ffffff !important; /* White text color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        /* Responsive toggle button color */
+        .navbar-toggler {
+            border-color: #002366;
+        }
+        .bg-br{
+            background-color: #e1ebf3;
+            padding: 40px;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+    /* ....... footer..... */
+        footer h5 {
+            color: #007bff;
+             font-weight: bold;
+                }
+
+        footer ul li {
+        margin-bottom: 8px;
+        }
+
+        footer ul li:hover {
+        color: #007bff;
+        cursor: pointer;
+        }
+
+        footer img {
+        display: block;
+        margin-bottom: 15px;
+        }
+
+        footer p, footer li {
+        font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="bg-dark text-white py-1 px-3 d-flex justify-content-between">
+        <div>
+            <i class="fa fa-envelope"></i> school@yahoo.com
+            <i class="fa fa-phone ms-3"></i> 01718785083
+            <i class="fa fa-phone ms-3"></i> 01719508530
+
+        </div>
+        <div>
+            <a href="{% url 'admin:index' %}" class="btn btn-primary">
+                Admin
+            </a> 
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <header class="school-header d-flex align-items-center py-3 border-bottom">
+        <!-- School Logo -->
+        <img src="{% static 'images/logo1.png' %}" alt="School Logo" class="school-logo me-3" style="width: 70px; margin: 10px; height: auto;">
+        
+        <!-- School Information -->
+        <div class="school-info">
+            <p class="mb-0 " style="font-weight:bold; color:#003366;"  >স্থাপিতঃ ২০০৩</p>
+            <h1 class="mb-1" style="font-size: 1.8rem; font-weight: bold; color: #006ad4;">ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল </h1>
+            <p class="mb-0" style="font-weight: bold; color: #555;">দুর্গাপুর(২৪ মাইল), আমিনপুর, পাবনা</p>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <button class="btn"><i class="fa fa-home"></i> হোম</button>
+
+                <!-- <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home Logo"> -->
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Dropdown 1 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            আমাদের সম্পর্কে
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="#">ইতিহাস</a>
+                            <a class="dropdown-item" href="#">মিশন ও ভিশন</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown 2 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="academicDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            একাডেমিক
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="academicDropdown">
+                            <a class="dropdown-item" href="#">ক্লাসের সময়</a>
+                            <a class="dropdown-item" href="#">শিক্ষকমণ্ডলী</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ভর্তি তথ্য</a>
+                    </li>
+                    <!-- Dropdown 3 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="studentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ছাত্র-ছাত্রী
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="studentsDropdown">
+                            <a class="dropdown-item" href="#">শিক্ষার্থীদের তথ্য</a>
+                            <a class="dropdown-item" href="#">ফলাফল</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">সুযোগ-সুবিধা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ফলাফল</a>
+                    </li>
+                    <!-- Dropdown 4 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="othersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            অন্যান্য
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="othersDropdown">
+                            <a class="dropdown-item" href="#">ইভেন্ট</a>
+                            <a class="dropdown-item" href="#">ডকুমেন্টস</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">যোগাযোগ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   {% block content %}
+   {% endblock %}
+<!-- <div class="container my-5 bg-st"> -->
+
+<br>
+    <footer style="background-color: #f8f9fa; padding: 20px 0; font-weight: 700;">
+        <div class="container">
+          <div class="row">
+            <!-- Left Section: School Info -->
+            <div class="col-md-4">
+              <div style="text-align: left;">
+                <!-- <img src="logo.png" alt="School Logo" style="width: 100px; margin-bottom: 10px;"> -->
+                <h5>ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল </h5>
+                <p>📞 মোবাইল: ০১৭১৮৭৮৫০৮৩</p>
+                <p>📧 ই-মেইল: info@school.com</p>
+                <p>📍 ঠিকানা: দুর্গাপুর(২৪ মাইল), আমিনপুর, পাবনা</p>
+              </div>
+            </div>
+      
+            <!-- Right Section: Important Links -->
+            <div class="col-md-8">
+              <h5 style="border-bottom: 2px solid #007bff; display: inline-block; margin-bottom: 10px;">জরুরি লিঙ্ক সমূহ</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul style="list-style: none; padding-left: 0;">
+                    <li>☑ মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর</li>
+                    <li>☑ বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো</li>
+                    <li>☑ বাংলাদেশ জাতীয় তথ্য বাতায়ন</li>
+                    <li>☑ শিক্ষা মন্ত্রণালয়</li>
+                    <li>☑ মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড, রাজশাহী</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul style="list-style: none; padding-left: 0;">
+                    <li>☑ প্রাথমিক ও গণশিক্ষা মন্ত্রণালয়</li>
+                    <li>☑ বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরী কমিশন</li>
+                    <li>☑ ঢাকা বিশ্ববিদ্যালয়</li>
+                    <li>☑ পাসপা - শিক্ষা প্রতিষ্ঠান ম্যানেজমেন্ট সিস্টেম</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+ 
