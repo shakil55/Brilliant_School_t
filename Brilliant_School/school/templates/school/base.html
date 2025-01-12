@@ -126,7 +126,7 @@
     </div>
     <header class="school-header d-flex align-items-center py-3 border-bottom">
         <!-- School Logo -->
-        <img src="{% static 'images/logo1.png' %}" alt="School Logo" class="school-logo me-3" style="width: 70px; margin: 10px; height: auto;">
+        <img src="{% static 'images/logo.jpg' %}" alt="School Logo" class="school-logo me-3" style="width: 90px; margin: 5px; height: 80px;">
         
         <!-- School Information -->
         <div class="school-info">
@@ -154,8 +154,8 @@
                             আমাদের সম্পর্কে
                         </a>
                         <div class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <a class="dropdown-item" href="#">ইতিহাস</a>
-                            <a class="dropdown-item" href="#">মিশন ও ভিশন</a>
+                            <a class="dropdown-item" href="{% url 'history' %}">ইতিহাস</a>
+                            <a class="dropdown-item" href="{% url 'mission-vision' %}">মিশন ও ভিশন</a>
                         </div>
                     </li>
                     <!-- Dropdown 2 -->

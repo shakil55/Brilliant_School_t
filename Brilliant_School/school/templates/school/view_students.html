@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Student List by Class</h2>
+        {% for class, students in students_by_class.items %}
+            <div class="card my-3">
+                <div class="card-header">
+                    <h4>{{ class }}</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        {% for student in students %}
+                            <li class="list-group-item">{{ student.name }} - {{ student.mobile_number }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

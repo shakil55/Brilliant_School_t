@@ -1,0 +1,23 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">শিক্ষকমণ্ডলী</h2>
+    <div class="row">
+        {% for teacher in teachers %}
+        <div class="col-md-3 mb-4">
+            <div class="card text-center">
+                <img src="{% if teacher.profile_pic %}{{ teacher.profile_pic.url }}{% else %}/static/images/default-profile.png{% endif %}" 
+                class="card-img-top" alt="{{ teacher.name }}" style="height: 150px; object-fit: cover;">           
+                <div class="card-body">
+                    <h5 class="card-title text-uppercase">{{ teacher.name }}</h5>
+                    <p class="card-text">{{ teacher.subject }}</p>
+                    <p>Contact: {{ teacher.mobile }}</p>
+                    <a href="{% url 'teacher_detail' teacher.id %}" class="btn btn-primary btn-sm">বিস্তারিত দেখুন</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

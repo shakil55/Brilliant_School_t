@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilliant School-Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        } 
+        .dashboard-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-footer {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .border-bottom{
+            border-width: 0svw;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+            <div class="dashboard-title text-center">Admin Dashboard</div>
+            <a href="logout.html" class="btn btn-info">Logout</a>
+        </div>
+
+        <!-- Action Cards -->
+        <div class="row mt-4">
+            <!-- Add Student -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-primary text-white text-center">
+                    <div class="card-body">
+                        <h5>Add Student</h5>
+                        <i class="fas fa-user-plus fa-2x"></i>
+                    </div>
+                    <a href="{% url 'add_student' %}" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- View All Students -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-success text-white text-center">
+                    <div class="card-body">
+                        <h5>View All Students</h5>
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <a href="{% url 'view_students' %}" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- Add Teacher -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-warning text-white text-center">
+                    <div class="card-body">
+                        <h5>Add Teacher</h5>
+                        <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                    </div>
+                    <a href="add_teacher.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- View All Teachers -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-danger text-white text-center">
+                    <div class="card-body">
+                        <h5>View All Teachers</h5>
+                        <i class="fas fa-chalkboard fa-2x"></i>
+                    </div>
+                    <a href="view_teachers.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- Attendance -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-info text-white text-center">
+                    <div class="card-body">
+                        <h5>Attendance</h5>
+                        <i class="fas fa-calendar-check fa-2x"></i>
+                    </div>
+                    <a href="attendance.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- Fee -->
+            <!-- Fee -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-secondary text-white text-center">
+                    <div class="card-body">
+                        <h5>Fee (৳)</h5 >
+                        <i class="fas fa-money-bill-wave fa-2x"></i>
+                    </div>
+                    <a href="fee.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+
+            <!-- Notice -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-dark text-white text-center">
+                    <div class="card-body">
+                        <h5>Notice</h5>
+                        <i class="fas fa-bullhorn fa-2x"></i>
+                    </div>
+                    <a href="notice.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card bg-success text-white text-center">
+                    <div class="card-body">
+                        <h5>Result</h5>
+                        <i class="fas fa-graduation-cap fa-2x"></i>
+                    </div>
+                    <a href="result.html" class="card-footer text-white">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

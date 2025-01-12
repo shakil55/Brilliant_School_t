@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from school import views
 
 admin.site.site_header = "Brilliant_School"
-
+admin.site.site_title = "Admin | Brilliant_School"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('school.urls')),

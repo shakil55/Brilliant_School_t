@@ -1,8 +1,9 @@
 
 from django.contrib import admin
-from .models import Teacher, Notice
+from .models import Teacher, Notice, Student
 
 admin.site.register(Teacher)
+admin.site.register(Student)
 # admin.site.register(Notice)
 
 @admin.register(Notice)

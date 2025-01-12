@@ -183,6 +183,58 @@
         font-weight: 500;
         color: rgba(255, 255, 255, 0.8);
     }
+   /* Card container */
+.card-container {
+    background: #f9f9f9;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header with image */
+.card-header {
+    position: relative;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.card-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card-header h2 {
+    color: #fff;
+    margin: 10px 0 5px;
+}
+
+.card-header p {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Body content */
+.card-body {
+    padding: 20px;
+    background: #fff;
+}
+
+.card-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
 
     
 </style>
@@ -208,13 +260,13 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{% static 'images/bg1.png' %}" alt="First slide">
+            <img class="d-block w-100" src="{% static 'images/bbg3.jpg' %}" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'images/nbg1.png' %}" alt="Second slide">
+            <img class="d-block w-100" src="{% static 'images/bbg2.jpg' %}" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'images/nbg3.jpg' %}" alt="Third slide">
+            <img class="d-block w-100" src="{% static 'images/bbg1.jpg' %}" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
@@ -228,6 +280,74 @@
       </div>
       
 </section>
+<!-- 'images/head_teacher.jpg' -->
+<section style="background: #f4f5f7; padding: 50px 0;">
+    <div  style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 20px;">
+
+        <!-- Head Teacher Message -->
+        <div class="message-card" style="flex: 1 1 48%; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); border-left: 8px solid #05710e; overflow: hidden; min-width: 300px;">
+            <div style="display: flex; align-items: center; gap: 20px; background-color: #05710e; padding: 10px; border-radius: 8px;">
+                <!-- Image -->
+                <div style="flex: 0 0 150px;">
+                    <img src="{% static 'images/head_teacher1.png' %}" alt="Head Teacher" 
+                         style="width: 100%; border-radius: 8px; border: 3px solid #fff;">
+                </div>
+                <!-- Info -->
+                <div style="flex: 1; color: #fff;">
+                    <h2 style="margin: 0; font-size: 24px; font-weight: 600;">মোঃ আব্দুস ছাত্তার মৃধা</h2>
+                    <p style="margin: 5px 0; font-size: 16px; font-weight: 600;"><i class="fas fa-school"></i> প্রধান শিক্ষক</p>
+                    <p style="margin: 5px 0; font-size: 14px; font-weight: 600;">ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল</p>
+                </div>
+                
+            </div>
+            <!-- Content -->
+            <div style="margin-top: 20px;">
+                <i class="fas fa-quote-left" style="font-size: 30px; color: #ccc;"></i>
+                <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; margin: 10px 0 20px;">
+                    প্রিয় শিক্ষার্থী, অভিভাবক ও সম্মানিত অতিথিবৃন্দ, <br> 
+                    আমি অত্যন্ত আনন্দিত যে, গত কয়েক দশক ধরে "Brilliant KG & High School" এর শিক্ষার্থীরা শুধু একাডেমিক শিক্ষায় নয়, নৈতিকতা ও মানবিক গুণাবলী অর্জনের ক্ষেত্রেও সাফল্য অর্জন করছে। আমাদের লক্ষ্য হলো একটি সুশৃঙ্খল, জ্ঞানভিত্তিক ও সৃজনশীল পরিবেশ তৈরি করা যেখানে শিক্ষার্থীরা তাদের সম্ভাবনাগুলোকে সর্বোচ্চ পর্যায়ে নিয়ে যেতে পারবে।<br><br>
+                    আমাদের দক্ষ ও নিবেদিতপ্রাণ শিক্ষকবৃন্দ প্রতিনিয়ত শিক্ষার্থীদের গুণগত শিক্ষা প্রদান করে চলেছেন। পাশাপাশি, অভিভাবকদের আন্তরিক সহযোগিতা আমাদের এ দীর্ঘ যাত্রার অন্যতম প্রধান চালিকাশক্তি। আমরা প্রতিজ্ঞাবদ্ধ যে, আমাদের শিক্ষার্থীদের ভবিষ্যত উজ্জ্বল করতে আমরা সর্বদা নিরলস প্রচেষ্টা চালিয়ে যাব।<br><br>
+                    আপনাদের সহযোগিতা ও ভালোবাসা আমাদের এই যাত্রাকে আরও সুন্দর ও সাফল্যমণ্ডিত করবে বলে আমি বিশ্বাস করি।
+                </p>
+                <i class="fas fa-quote-right" style="font-size: 30px; color: #ccc; float: right;"></i>
+            </div>
+        </div>
+
+        <!-- Managing Director (MD) Message -->
+        <div class="message-card" style="flex: 1 1 48%; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); border-left: 8px solid #ff9800; overflow: hidden; min-width: 300px;">
+            <div style="display: flex; align-items: center; gap: 20px; background-color: #ff9800; padding: 10px; border-radius: 8px;">
+                <!-- Image -->
+                <div style="flex: 0 0 150px;">
+                    <img src="{% static 'images/MD.png' %}" alt="Managing Director" 
+                         style="width: 100%; border-radius: 8px; border: 3px solid #fff;">
+                </div>
+                <!-- Info -->
+                <div style="flex: 1; color: #fff;">
+                    <h2 style="margin: 0; font-size: 24px; font-weight: 600;">সুলতান মাহমুদ খান(টিটু)</h2>
+                    <p style="margin: 5px 0; font-size: 16px; font-weight: 600;"><i class="fas fa-user-tie"></i> পরিচালক</p>
+                    <p style="margin: 5px 0; font-size: 14px; font-weight: 600;">ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল</p>
+                </div>
+                
+            </div>
+            <!-- Content -->
+            <div style="margin-top: 20px;">
+                <i class="fas fa-quote-left" style="font-size: 30px; color: #ccc;"></i>
+                <p style="font-size: 16px; line-height: 1.8; color: #555; text-align: justify; margin: 10px 0 20px;">
+                    প্রিয় সকল শিক্ষার্থী, শিক্ষক ও অভিভাবকগণ,<br> 
+                    আমাদের স্কুল সব সময় মানসম্পন্ন শিক্ষা প্রদানের লক্ষ্যে কাজ করে আসছে। আমরা বিশ্বাস করি, একটি মানসম্মত শিক্ষা প্রতিষ্ঠান কেবলমাত্র একাডেমিক সফলতা অর্জনের জন্য নয়, বরং শিক্ষার্থীদের নৈতিকতা, মূল্যবোধ ও সৃজনশীলতা বিকাশের জন্যও গুরুত্বপূর্ণ ভূমিকা পালন করে।<br><br>
+                    আমরা আশা করি, এই শিক্ষা প্রতিষ্ঠানের প্রতিটি শিক্ষার্থী ভবিষ্যতে দেশের উন্নয়নে অবদান রাখতে সক্ষম হবে। শিক্ষার্থীদের পাশে থেকে তাদের সঠিক দিকনির্দেশনা দেওয়া আমাদের অঙ্গীকার। <br><br>
+                    অভিভাবক ও শিক্ষক সমাজের সমর্থনে আমরা এই লক্ষ্যে পৌঁছাতে পারবো বলে আমার দৃঢ় বিশ্বাস।
+                </p>
+                <i class="fas fa-quote-right" style="font-size: 30px; color: #ccc; float: right;"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
 
     <!-- Navigation Bar -->
     <!-- Navigation Bar -->
@@ -335,6 +455,32 @@
 </div>
 <br>
 <br>
+<section style="background: #f9f9f9; padding: 40px;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="font-size: 28px; font-weight: bold; color: #333;">আমাদের শিক্ষকমন্ডলী</h2>
+        <p style="color: #555; font-size: 16px;">আমাদের দক্ষ ও অভিজ্ঞ শিক্ষকমন্ডলী যাঁরা প্রতিনিয়ত শিক্ষার্থীদের গুণগত শিক্ষা প্রদানে নিয়োজিত</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        {% for teacher in teachers %}
+        <!-- Teacher Card -->
+        <a href="{% url 'teacher_detail' teacher.id %}" style="text-decoration: none; color: inherit;">
+            <div style="width: 280px; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s;">
+                <div style="position: relative; height: 200px; overflow: hidden;">
+                    <img src="{% if teacher.profile_pic %}{{ teacher.profile_pic.url }}{% else %}{% static 'images/default-profile.png' %}{% endif %}" 
+                         alt="{{ teacher.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.5); color: #fff; padding: 10px; text-align: center;">
+                        <h3 style="margin: 0;">{{ teacher.name }}</h3>
+                        <p style="margin: 5px 0 0; font-size: 14px;">{{ teacher.subject }}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+
 
 
 <!-- <div class="container my-5 bg-st"> -->
