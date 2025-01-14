@@ -13,9 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
 
 
     <style>
+
+       body {
+        font-family: 'Noto Sans Bengali', sans-serif;
+        }
         /* Navbar default style */
         .navbar-nav .nav-link {
             color: black !important;
@@ -137,7 +142,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <button class="btn"><i class="fa fa-home"></i> হোম</button>
 
                 <!-- <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home Logo"> -->
@@ -165,11 +170,11 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="academicDropdown">
                             <a class="dropdown-item" href="#">ক্লাসের সময়</a>
-                            <a class="dropdown-item" href="#">শিক্ষকমণ্ডলী</a>
+                            <a class="dropdown-item" href="{% url 'teacher_list' %}">শিক্ষকমণ্ডলী</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ভর্তি তথ্য</a>
+                        <a class="nav-link" href="{% url 'addmission_info'%}">ভর্তি তথ্য</a> 
                     </li>
                     <!-- Dropdown 3 -->
                     <li class="nav-item dropdown">
@@ -182,10 +187,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">সুযোগ-সুবিধা</a>
+                        <a class="nav-link" href="{% url 'facilities' %}">সুযোগ-সুবিধা</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ফলাফল</a>
+                        <a class="nav-link" href="{% url 'result' %}">ফলাফল</a>
                     </li>
                     <!-- Dropdown 4 -->
                     <li class="nav-item dropdown">
@@ -198,7 +203,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">যোগাযোগ</a>
+                        <a class="nav-link" href="{% url 'contact_us'%}">যোগাযোগ</a>
                     </li>
                 </ul>
             </div>
@@ -225,27 +230,28 @@
       
             <!-- Right Section: Important Links -->
             <div class="col-md-8">
-              <h5 style="border-bottom: 2px solid #007bff; display: inline-block; margin-bottom: 10px;">জরুরি লিঙ্ক সমূহ</h5>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul style="list-style: none; padding-left: 0;">
-                    <li>☑ মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর</li>
-                    <li>☑ বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো</li>
-                    <li>☑ বাংলাদেশ জাতীয় তথ্য বাতায়ন</li>
-                    <li>☑ শিক্ষা মন্ত্রণালয়</li>
-                    <li>☑ মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড, রাজশাহী</li>
-                  </ul>
+                <h5 style="border-bottom: 2px solid #007bff; display: inline-block; margin-bottom: 10px;">জরুরি লিঙ্ক সমূহ</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><a href="https://example.com" target="_blank">☑ মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ বাংলাদেশ জাতীয় তথ্য বাতায়ন</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ শিক্ষা মন্ত্রণালয়</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড, রাজশাহী</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><a href="https://example.com" target="_blank">☑ প্রাথমিক ও গণশিক্ষা মন্ত্রণালয়</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরী কমিশন</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ ঢাকা বিশ্ববিদ্যালয়</a></li>
+                            <li><a href="https://example.com" target="_blank">☑ পাসপা - শিক্ষা প্রতিষ্ঠান ম্যানেজমেন্ট সিস্টেম</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                  <ul style="list-style: none; padding-left: 0;">
-                    <li>☑ প্রাথমিক ও গণশিক্ষা মন্ত্রণালয়</li>
-                    <li>☑ বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরী কমিশন</li>
-                    <li>☑ ঢাকা বিশ্ববিদ্যালয়</li>
-                    <li>☑ পাসপা - শিক্ষা প্রতিষ্ঠান ম্যানেজমেন্ট সিস্টেম</li>
-                  </ul>
-                </div>
-              </div>
             </div>
+            
           </div>
         </div>
       </footer>

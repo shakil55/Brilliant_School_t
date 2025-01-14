@@ -1,0 +1,82 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<style>
+  
+
+     
+    .facility-list {
+        list-style: none;
+        padding: 0;
+    }
+    .facility-list li {
+        background-color: #e9f4ff;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+        font-size: 19px;
+    }
+    .facility-list li::before {
+        content: '✔';
+        color: #007bff;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    .highlight-section {
+        background-color: #d1ecf1;
+        padding: 15px;
+        border-left: 5px solid #007bff;
+        margin-top: 20px;
+    }
+    .highlight-section p {
+        font-weight: bold;
+        color: #0c5460;
+        font-weight: 600;
+        font-size: 19px;
+    }
+
+    @media (min-width: 700px) {
+        .f-head{
+            margin-left: 40%;
+
+        }
+    }
+</style>
+<div class="container" >
+    <h2 class="f-head" style="text-align: center; font-weight: bold; margin-bottom: 30px; margin-left:20%; color: #333; font-size: 36px; position: relative; display: inline-block; padding-bottom: 4px; padding-top: 20px;  border-bottom: 6px solid #0056b3;">
+        সুযোগ-সুবিধা     
+    </h2>    
+    <ul class="facility-list">
+        <li>অভিজ্ঞ শিক্ষক মন্ডলী মাতৃস্নেহে পাঠদান</li>
+        <li>সি.সি ক্যামেরা দ্বারা বিদ্যালয়টি নিয়ন্ত্রিত</li>
+        <li>প্রতিদিনের পাঠদানকৃত অংশ ক্লাসেই তৈরি</li>
+        <li>প্রাথমিক চিকিৎসার সু-ব্যবস্থা</li>
+        <li>অভিভাবকের নিকট SMS প্রেরনের মাধ্যমে ছাত্র-ছাত্রী উপস্থিতি নিশ্চিত করন</li>
+        <li>স্কুল চলাকালীন সময় সার্বক্ষণিক নিরাপত্তার ব্যবস্থা</li>
+        <li>প্রজেক্টরের মাধ্যমে জটিল ক্লাস গুলোর সহজ উপস্থাপন</li>
+        <li>ছোট বাচ্চাদের স্কুলমুখী করার জন্য বিশেষ বিনোদনের ব্যবস্থা</li>
+        <li>বার্ষিক ক্রীড়া প্রতিযোগিতার ব্যবস্থা</li>
+        <li>সেন্টার পরীক্ষাগুলির জন্য বিশেষ কোচিং এর ব্যবস্থা (৫ম, ৮ম, ১০ম)</li>
+        <li>আই.পি.এস ও সোলার প্যানেল-এর মাধ্যমে নিরবিচ্ছিন্ন বিদ্যুৎ সরবরাহ</li>
+        <li>বাৎসরিক শিক্ষা সফরের ব্যবস্থা</li>
+        <li>অভিভাবকদের সময় কাটানোর জন্য টিভি, লুডু, পত্রিকা, ধর্মীয় ও গল্পের বই-এর ব্যবস্থা</li>
+        <li>ছাত্র-ছাত্রীদের মান উন্নয়নে, আদব কায়দা, রুচিসম্মত চলাফেরা ও ডেসআফ নিশ্চিত করা</li>
+        <li>সু-বিশাল সাইকেল গ্যারেজ</li>
+        <li>বাচ্চাদের খেলার জন্য সু-বিশাল মাঠ</li>
+        <li>ছেলে-মেয়েদের জন্য আলাদা নামাজ ঘর</li>
+        <li>ডিজিটাল ডিভাইসের মাধ্যমে ছাত্র/ছাত্রীদের দৈনিক হাজিরা নিশ্চিত করা</li>
+    </ul>
+
+    <div class="highlight-section">
+        <p>২০২৪ শিক্ষাবর্ষে সম্পৃক্ত বিষয়...</p>
+        <ul>
+            <li>কম্পিউটার প্রশিক্ষণ ও সরকারি সনদ প্রদান</li>
+            <li>ক্ষুদে বিজ্ঞানী তৈরির জন্য ওয়ার্কসপ</li>
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}

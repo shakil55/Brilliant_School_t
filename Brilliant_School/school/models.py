@@ -4,19 +4,19 @@ from django.contrib.auth.models import User
 # Teacher Model
 class Teacher(models.Model):
     name = models.CharField(max_length=100)
-    subject = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100, default='Teacher')
     profile_pic = models.ImageField(upload_to='teachers/', blank=True, null=True)
     father_name = models.CharField(max_length=100, default="Unkown")
     mother_name = models.CharField(max_length=100, default="Unknown")
-    date_of_birth = models.DateField(default="2000-01-01")
+    date_of_birth = models.DateField(default="1985-01-01")
     religion = models.CharField(max_length=50, default="Islam")
     gender = models.CharField(max_length=10, default="Other")
     blood_group = models.CharField(max_length=5, default='N/A')
     education_qualification = models.TextField(default="Not specified")
     gmail = models.EmailField(default="example@gmail.com")
-    mobile = models.CharField(max_length=15, default="01000000000")
-    address = models.TextField(default="Not provided")
-
+    mobile = models.CharField(max_length=15, default="01xxxxxxxxx")
+    address = models.TextField(default="পাবনা")
+    hobby = models.CharField(max_length=200, default="Not specified") 
     def __str__(self):
         return self.name
 

@@ -83,3 +83,18 @@ def history(request):
 
 def mission_vision(request):
     return render(request, 'school/mission_vision.html')
+
+
+def facilities_view(request):
+    return render(request, 'school/facilities.html')
+
+def result_view(request):
+    return render(request, 'school/result.html')
+
+def admission_information(request):
+    return render(request, 'school/addmission_info.html' )
+
+def contact_us(request):
+    return render(request, 'school/contact_us.html')
+
+

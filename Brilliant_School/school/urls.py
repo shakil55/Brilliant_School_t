@@ -13,6 +13,10 @@ urlpatterns = [
     path('teachers/<int:pk>/', views.teacher_detail, name='teacher_detail'),
     path('history/', views.history, name='history'),
     path('mission-vision/', views.mission_vision, name='mission-vision'),
+    path('facilities/', facilities_view, name='facilities'),
+    path('result/',views.result_view,name='result'),
+    path('admission_information/',views.admission_information, name='addmission_info'),
+    path('contact/', views.contact_us, name='contact_us'),
 
 
 ]
