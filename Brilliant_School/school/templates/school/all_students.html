@@ -1,0 +1,112 @@
+{% extends 'school/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">All Students</h2>
+
+    <!-- Filter & Search Form -->
+    <form method="GET" class="mb-4">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="class" class="form-label">Select Class:</label>
+                <select name="class" id="class" class="form-select">
+                    <option value="">All Classes</option>
+                    {% for key, value in class_choices %}
+                        <option value="{{ key }}" {% if request.GET.class == key %} selected {% endif %}>{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label for="section" class="form-label">Select Section:</label>
+                <select name="section" id="section" class="form-select">
+                    <option value="">All Sections</option>
+                    {% for key, value in section_choices %}
+                        <option value="{{ key }}" {% if request.GET.section == key %} selected {% endif %}>{{ value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="search" class="form-label">Search by Name:</label>
+                <input type="text" name="search" id="search" value="{{ search_query }}" class="form-control" placeholder="Enter student name...">
+            </div>
+
+            <div class="col-md-2 align-self-end">
+                <button type="submit" class="btn btn-primary w-100">Filter</button>
+                <a href="{% url 'all_students' %}" class="btn btn-secondary">Reset</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Student Table -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>নাম</th>
+                <th>পিতার নাম</th>
+                <th>মাতার নাম</th>
+                <!-- <th>মোবাইল নম্বর</th> -->
+                <th>শ্রেণি</th>
+                <th>শাখা</th>
+                <th>রোল নম্বর</th>
+                <!-- <th>জন্ম তারিখ</th> -->
+                <th>রক্তের গ্রুপ</th>
+                <th>ধর্ম</th>
+                <!-- <th>ঠিকানা</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.father_name }}</td>
+                    <td>{{ student.mother_name }}</td>
+                    <!-- <td>{{ student.mobile_number }}</td> -->
+                    <td>{{ student.get_student_class_display }}</td>
+                    <td>{{ student.get_section_display }}</td>
+                    <td>{{ student.roll_number }}</td>
+                    <!-- <td>{{ student.date_of_birth }}</td> -->
+                    <td>{{ student.blood_group }}</td>
+                    <td>{{ student.religion }}</td>
+                    <!-- <td>{{ student.address }}</td> -->
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="11" class="text-center">No students found</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav>
+        <ul class="pagination justify-content-center">
+            {% if students.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1&class={{ request.GET.class }}&section={{ request.GET.section }}&search={{ request.GET.search }}">First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ students.previous_page_number }}&class={{ request.GET.class }}&section={{ request.GET.section }}&search={{ request.GET.search }}">Previous</a>
+                </li>
+            {% endif %}
+
+            <li class="page-item disabled">
+                <span class="page-link">Page {{ students.number }} of {{ students.paginator.num_pages }}</span>
+            </li>
+
+            {% if students.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ students.next_page_number }}&class={{ request.GET.class }}&section={{ request.GET.section }}&search={{ request.GET.search }}">Next</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ students.paginator.num_pages }}&class={{ request.GET.class }}&section={{ request.GET.section }}&search={{ request.GET.search }}">Last</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}

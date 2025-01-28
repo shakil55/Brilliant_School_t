@@ -37,52 +37,68 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="name">নাম</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter student name" required>
+                    <input type="text" class="form-control" id="name" name="name" value="অজানা" required>
                 </div>
                 <div class="form-group">
                     <label for="father_name">পিতার নাম</label>
-                    <input type="text" class="form-control" id="father_name" name="father_name" placeholder="Enter father's name" required>
+                    <input type="text" class="form-control" id="father_name" name="father_name" value="অজানা" required>
                 </div>
                 <div class="form-group">
                     <label for="mother_name">মাতার নাম</label>
-                    <input type="text" class="form-control" id="mother_name" name="mother_name" placeholder="Enter mother's name" required>
+                    <input type="text" class="form-control" id="mother_name" name="mother_name" value="অজানা" required>
                 </div>
                 <div class="form-group">
                     <label for="mobile_number">মোবাইল নম্বর</label>
-                    <input type="text" class="form-control" id="mobile_number" name="mobile_number" placeholder="Enter mobile number" required>
+                    <input type="text" class="form-control" id="mobile_number" name="mobile_number" value="N/A" required>
                 </div>
                 <div class="form-group">
                     <label for="student_class">শ্রেণি</label>
                     <select class="form-control" id="student_class" name="student_class" required>
                         <option value="প্লে">প্লে</option>
-                        <option value="১ম">নার্সারি</option>
-                        <option value="১ম">১ম</option>
-                        <option value="২য়">২য়</option>
-                        <option value="৩য়">৩য়</option>
-                        <option value="৪র্থ">৪র্থ</option>
-                        <option value="৫ম">৫ম</option>
-                        <option value="৬ষ্ঠ">৬ষ্ঠ</option>
-                        <option value="৭ম">৭ম</option>
-                        <option value="৮ম">৮ম</option>
-                        <option value="৯ম">৯ম</option>
-                        <option value="১০ম">১০ম</option>
+                        <option value="নার্সারি">নার্সারি</option>
+                        <option value="প্রথম">প্রথম</option>
+                        <option value="দ্বিতীয়">দ্বিতীয়</option>
+                        <option value="তৃতীয়">তৃতীয়</option>
+                        <option value="চতুর্থ">চতুর্থ</option>
+                        <option value="পঞ্চম">পঞ্চম</option>
+                        <option value="ষষ্ঠ">ষষ্ঠ</option>
+                        <option value="সপ্তম">সপ্তম</option>
+                        <option value="অষ্টম">অষ্টম</option>
+                        <option value="নবম">নবম</option>
+                        <option value="দশম">দশম</option>
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="section">শাখা</label>
+                    <select class="form-control" id="section" name="section" required>
+                        <option value="ক">ক</option>
+                        <option value="খ">খ</option>
+                        <option value="গ">গ</option>
+                        <option value="বিজ্ঞান">বিজ্ঞান</option>
+                        <option value="বানিজ্য">বানিজ্য</option>
+                        <option value="মানবিক">মানবিক</option>
+                        <option value="None" selected>No Section</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="roll_number">রোল নম্বর</label>
+                    <input type="number" class="form-control" id="roll_number" name="roll_number" required>
+                </div>
+                <div class="form-group">
                     <label for="date_of_birth">জন্ম তারিখ</label>
-                    <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required>
+                    <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" value="2010-01-01" required>
                 </div>
                 <div class="form-group">
                     <label for="blood_group">রক্তের গ্রুপ</label>
-                    <input type="text" class="form-control" id="blood_group" name="blood_group" placeholder="Enter blood group" required>
+                    <input type="text" class="form-control" id="blood_group" name="blood_group" value="N/A" required>
                 </div>
                 <div class="form-group">
                     <label for="religion">ধর্ম</label>
-                    <input type="text" class="form-control" id="religion" name="religion" placeholder="Enter religion" required>
+                    <input type="text" class="form-control" id="religion" name="religion" value="N/A" required>
                 </div>
                 <div class="form-group">
                     <label for="address">ঠিকানা</label>
-                    <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter address" required></textarea>
+                    <textarea class="form-control" id="address" name="address" rows="3" required>N/A</textarea>
                 </div>
                 <button type="submit" class="btn btn-custom btn-block">Add Student</button>
             </form>

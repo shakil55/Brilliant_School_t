@@ -1,0 +1,49 @@
+{% extends 'school/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center class-heading">Available Classes</h2>
+    <div class="row justify-content-center">
+        {% for class in classes %}
+            <div class="col-md-4 col-sm-6 my-3">
+                <div class="card class-card shadow-lg">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-uppercase font-weight-bold class-title">{{ class }}</h5>
+                        <a href="{% url 'section_list' student_class=class %}" class="btn btn-outline-primary btn-lg">View Sections</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .class-heading {
+        border-bottom: 3px solid #007bff;
+        display: inline-block;
+        padding-bottom: 10px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .class-card {
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .class-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .class-title {
+        border: 2px solid #007bff;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        color: #0056b3;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}

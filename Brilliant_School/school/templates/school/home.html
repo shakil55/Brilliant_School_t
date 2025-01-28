@@ -281,7 +281,7 @@
       
 </section>
 <!-- 'images/head_teacher.jpg' -->
-<section style="background: #f4f5f7; padding: 50px 0;">
+<section class="container" style="background: #f4f5f7; padding: 50px 0;">
     <div  style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 20px;">
 
         <!-- Head Teacher Message -->
@@ -345,10 +345,6 @@
     </div>
 </section>
 
-
-
-
-
     <!-- Navigation Bar -->
     <!-- Navigation Bar -->
     <!-- Notice Board -->
@@ -372,62 +368,76 @@
         </div>
     </div>
  
-<br>
-<br>
-<br>
+
 <div class="container mt-5">
     <div class="row g-3">
-        <!-- Menu Section -->
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-users fa-2x text-white mb-2"></i>
-                <div class="text-white">Student List</div>
-            </div>
+            <a href="{% url 'all_students' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-users fa-2x text-white mb-2"></i>
+                    <div class="text-white">Student List</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-user fa-2x text-white mb-2"></i>
-                <div class="text-white">Our Teachers</div>
-            </div>
+            <a href="{% url 'teacher_list' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-user fa-2x text-white mb-2"></i>
+                    <div class="text-white">Our Teachers</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-check fa-2x text-white mb-2"></i>
-                <div class="text-white">Attendance Sheet</div>
-            </div>
+            <a href="{% url 'class_list' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-check fa-2x text-white mb-2"></i>
+                    <div class="text-white">Attendance Sheet</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-bolt fa-2x text-white mb-2"></i>
-                <div class="text-white">Result</div>
-            </div>
+            <a href="{% url 'result' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-bolt fa-2x text-white mb-2"></i>
+                    <div class="text-white">Result</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-bell fa-2x text-white mb-2"></i>
-                <div class="text-white">Exam Schedule</div>
-            </div>
+            <a href="{% url 'exam_schedule' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-bell fa-2x text-white mb-2"></i>
+                    <div class="text-white">Exam Schedule</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-newspaper fa-2x text-white mb-2"></i>
-                <div class="text-white">News</div>
-            </div>
+            <a href="{% url 'news' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-newspaper fa-2x text-white mb-2"></i>
+                    <div class="text-white">News</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-registered fa-2x text-white mb-2"></i>
-                <div class="text-white">Routine</div>
-            </div>
+            <a href="{% url 'routine' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-registered fa-2x text-white mb-2"></i>
+                    <div class="text-white">Routine</div>
+                </div>
+            </a>
         </div>
         <div class="col-md-3 col-sm-6">
-            <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
-                <i class="fa fa-image fa-2x text-white mb-2"></i>
-                <div class="text-white">Gallery</div>
-            </div>
+            <a href="{% url 'gallery' %}">
+                <div class="menu-item text-center p-4" style="background: #041af0; border-radius: 10px; transition: transform 0.3s;">
+                    <i class="fa fa-image fa-2x text-white mb-2"></i>
+                    <div class="text-white">Gallery</div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
+
 
 <!-- Hover Effect Style -->
 <style>
@@ -543,7 +553,6 @@
         </div>
     </div>
 </div>
-<br>
 <br>
 
 <div class="container my-5 bg-st">

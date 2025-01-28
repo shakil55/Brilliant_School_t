@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2 class="text-center mb-4">শিক্ষক তথ্য</h2>
+    <h2 class="text-center mb-4 teacher-heading">শিক্ষক তথ্য</h2>
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% if teacher.profile_pic %}{{ teacher.profile_pic.url }}{% else %}/static/images/default-profile.png{% endif %}" 
@@ -53,9 +53,25 @@
                         <th>ঠিকানা</th>
                         <td>{{ teacher.address }}</td>
                     </tr>
+                    <tr>
+                        <th>শখ</th>
+                        <td>{{ teacher.hobby}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+<style>
+    .teacher-heading {
+        display: inline-block; /* Ensures proper sizing */
+        border-bottom: 3px solid blue; /* Bottom border */
+        padding-bottom: 5px; /* Spacing for better appearance */
+        font-weight: bold; /* Makes the text bold */
+        font-size: 28px; /* Adjust font size */
+        color: #333; /* Optional: Improve readability */
+        text-transform: uppercase; /* Optional: Capitalize text */
+        margin-left:49%
+    }
+</style>
 {% endblock %}

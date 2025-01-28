@@ -1,48 +1,31 @@
 {% extends 'school/base.html' %}
 
 {% block content %}
-<style>
-    /* Section styling */
-    .history-section {
-        padding: 40px;
-        background: #e2e2e2;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-
-    /* Title styling */
-    .history-section h2 {
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 20px;
-        font-size: 32px;
-        color: #333;
-        text-transform: uppercase;
-        border-bottom: 3px solid #4CAF50;
-        display: inline-block;
-        padding-bottom: 10px;
-    }
-
-    /* Paragraph styling */
-    .history-section p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #555;
-        text-align: justify;
-    }
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
-
-<section>
+<section style="padding: 60px 20px; background: linear-gradient(135deg, #f0f4f7, #dce3e8);">
     <div class="container">
-        <h2 style="text-align: center; font-weight: bold; margin-bottom: 30px; margin-left:40%; color: #333; font-size: 36px; position: relative; display: inline-block;  border-bottom: 6px solid #0056b3; padding-top: 20px;">
-            ইতিহাস    
-        </h2>  
-        <p>
-            ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল প্রতিষ্ঠিত হয় ২০০৩ সালে। প্রতিষ্ঠার পর থেকে বিদ্যালয়টি
-            শিক্ষার্থীদের মানসম্মত শিক্ষা প্রদানের মাধ্যমে সুনামের সাথে পরিচালিত হয়ে আসছে। স্কুলটি
-            এলাকার শিক্ষার মান উন্নয়নে গুরুত্বপূর্ণ ভূমিকা পালন করে আসছে।
-        </p>
+        <h2 style="text-align: center; font-weight: bold; margin-bottom: 30px; color: #333; font-size: 36px; position: relative; display: inline-block; padding-bottom: 10px; border-bottom: 3px solid #0056b3;">
+            ইতিহাস
+        </h2>
+        
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 22px; font-weight: bold; color: #0056b3; margin-bottom: 15px;">
+                আমাদের ইতিহাস
+            </h3>
+            <p style="font-size: 16px; line-height: 1.8; color: #555; font-weight: 600;">
+                ব্রিলিয়ান্ট কেজি অ্যান্ড হাই স্কুলের যাত্রা শুরু ২০০৩ সালে, কয়েকজন ছাত্র-ছাত্রী এবং কিছু শুভাকাঙ্ক্ষীর হাত ধরে। প্রতিষ্ঠার শুরুতেই বিদ্যালয়ের নেতৃত্বে ছিলেন পরিচালক জনাব সুলতান মাহমুদ খান (টিটু) এবং প্রধান শিক্ষক মোঃ আঃ ছাত্তার, যাঁদের অক্লান্ত পরিশ্রম ও নেতৃত্বে বিদ্যালয়ের ভিত মজবুত হয়। সঙ্গে ছিলেন কিছু নিবেদিতপ্রাণ সহকারী শিক্ষক, যাঁরা অল্প সময়ে বিদ্যালয়টিকে একটি স্বনামধন্য প্রতিষ্ঠানে পরিণত করেন।
+
+                আজ এই বিদ্যালয়ের অনেক প্রাক্তন শিক্ষার্থী দেশের বিভিন্ন নামকরা শিক্ষা প্রতিষ্ঠানে অধ্যয়নরত এবং দেশের গুরুত্বপূর্ণ পদে দায়িত্ব পালন করছেন। বিদ্যালয়ের এই অগ্রযাত্রা তার প্রতিষ্ঠাকালীন সময় থেকেই একটি শক্তিশালী ভিত্তির ওপর দাঁড়িয়ে রয়েছে।
+            </p>
+            <p style="font-size: 16px; line-height: 1.8; color: #555;">
+                ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল বর্তমানে ৩০ জন দক্ষ ও অভিজ্ঞ শিক্ষক ও স্টাফের সমন্বয়ে পরিচালিত হচ্ছে। প্রতিটি শিক্ষক তাদের দায়িত্ব সততা, নিষ্ঠা এবং পেশাদারিত্বের সাথে পালন করছেন। আমরা বিশ্বাস করি, উন্নত মানের শিক্ষা এবং সুন্দর পরিবেশই একটি শিক্ষার্থীর ভবিষ্যৎ গঠনে সহায়ক ভূমিকা পালন করে।
+
+               আমাদের প্রতিজ্ঞা হলো প্রতিটি শিক্ষার্থীকে মানসম্মত শিক্ষা প্রদানের পাশাপাশি তাদের নৈতিক ও মানসিক উন্নয়নে সহায়তা করা। আমরা সর্বদা চেষ্টা করি আধুনিক শিক্ষার সাথে সামঞ্জস্য রেখে আমাদের শিক্ষার্থীদের সর্বোচ্চ সুবিধা প্রদান করতে।
+
+                ব্রিলিয়ান্ট কেজি এন্ড হাই স্কুল আপনাদের সন্তানের উজ্জ্বল ভবিষ্যৎ গঠনে দৃঢ়প্রতিজ্ঞ।
+            </p>
+        </div>
     </div>
 </section>
 {% endblock %}
+
+<!-- background: linear-gradient(135deg, #f0f4f7, #a9d4f2); -->

@@ -71,3 +71,7 @@ class NoticeForm(forms.ModelForm):
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': 'নোটিশের বিবরণ'}),
             'file': forms.ClearableFileInput(attrs={'class': 'form-control'}),
         }
+
+
+class StudentFileUploadForm(forms.Form):
+    file = forms.FileField(label="Upload CSV/Excel File")

@@ -1,0 +1,10 @@
+{% extends "admin/change_form.html" %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    {% if opts.model_name == "student" and opts.app_label == "school" %}
+        <li>
+            <a href="{% url 'admin:upload_students' %}" class="button">Upload CSV/Excel</a>
+        </li>
+    {% endif %}
+{% endblock %}
